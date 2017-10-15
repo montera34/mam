@@ -1,0 +1,54 @@
+/*!
+Theme Name: Madrid a Medias
+Theme URI: http://a-medias.org
+Author: Montera34
+Author URI: https://montera34.com
+Description: WordPress theme for Madrid a Medias project, based on WordPress Starter Theme.
+Version: 0.1
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: _mbbasetheme
+Domain Path: /languages/
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+mam is based on _mbbasetheme https://github.com/mattbanks/WordPress-Starter-Theme by Matt Banks
+_mbbasetheme is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+*/
+
+// Reset, Variables, Mixins, Etc
+// DO NOT EDIT ORDER OF FILES
+@import "partials/mixins";
+@import "partials/variables";
+// @import "partials/normalize";
+
+// Globals
+// @import "partials/h5bp-global";
+@import "partials/general";
+// @import "partials/grid";
+// @import "partials/spritesheet";
+
+// Layout
+// @import "partials/layout";
+@import "partials/header";
+@import "partials/footer";
+
+// Menus, Page and Post styles
+@import "partials/menus";
+@import "partials/page-post";
+
+// Page Templates
+@import "partials/page-home";
+@import "partials/page-blog";
+
+// Widgets, Search, Comments, Forms, Sharing
+@import "partials/widgets";
+@import "partials/comments";
+@import "partials/forms";
+
+// Helper Classes, Print, Etc
+// @import "partials/helpers";
+// @import "partials/print";

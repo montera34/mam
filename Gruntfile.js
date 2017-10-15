@@ -141,9 +141,9 @@ module.exports = function(grunt) {
                     src : ['style.css', 'assets/js/*.js', 'assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}']
                 },
                 options: {
-                    proxy: "local.dev",
+                    proxy: "http://amedias.localhost",
                     watchTask: true,
-                    browser: "google chrome"
+                    browser: "firefox"
                 }
             }
         },

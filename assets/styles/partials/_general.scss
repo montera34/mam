@@ -24,10 +24,7 @@ body { }
 
 a,
 a:visited {
-	color: $red;
-}
-a:hover {
-	color: $blue;
+	text-decoration: underline;
 }
 
 
@@ -53,40 +50,6 @@ h4 { }
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
-
-p {
-	margin-bottom: 1.5em;
-}
-
-blockquote {
-	margin: 0 1.5em;
-}
-
-address {
-	margin: 0 0 1.5em;
-}
-
-
-/* ==========================================================================
-   Alignment
-   ========================================================================== */
-
-.alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
-}
-.alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
-}
-.aligncenter {
-	clear: both;
-	display: block;
-	margin: 0 auto;
-}
-
 
 /* ==========================================================================
    Accessiblity
@@ -147,18 +110,3 @@ address {
 	clear: both;
 }
 
-
-/* ==========================================================================
-   Infinite Scroll
-   ========================================================================== */
-
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
-.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
-	display: none;
-}
-
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
-.infinity-end.neverending .site-footer {
-	display: block;
-}

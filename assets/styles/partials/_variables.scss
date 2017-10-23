@@ -5,12 +5,22 @@
 // Font Face
 // @include fontface('FONT_NAME', 'assets/fonts/', 'FONT_FAMILY');
 
-// Structure
-$pageWidth: 1000px;
-
-// Text Selection
-$selectionColor: orange;
-
 // Colors
-$red: red;
-$blue: blue;
+$brand-primary: #000;
+$brand-primary-transparent: rgba(0,0,0,0.6);
+$body-bg: #fff;
+$text-color: $brand-primary;
+$link-color: $brand-primary;
+$link-hover-color: #000;
+
+$active-color: $link-hover-color;
+
+// Sizes
+$font-size-base: 16px;
+$line-height-base: 1.428571429;
+
+// Spaces
+$spacetop = 25px;
+$spacebottom = 25px;
+$bigspacetop = 50px;
+$bigspacebottom = 50px;

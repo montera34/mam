@@ -141,3 +141,6 @@ function mb_remove_more_jump_link( $link ) {
 	}
 	return $link;
 }
+
+// Register Custom Navigation Walker
+require_once get_template_directory() . '/lib/wp-bootstrap-navwalker.php';

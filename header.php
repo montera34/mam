@@ -25,7 +25,7 @@
 	    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
-	<header id="masthead" class="site-header" role="banner">
+	<header id="pre" class="site-header" role="banner">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
@@ -34,7 +34,7 @@
 			</div><!-- row -->
 		</div><!-- container -->
 
-		<nav id="pre-menu" class="navbar navbar-default bargl" role="navigation">
+		<nav id="pre-menu" class="navbar navbar-default mam-menu" role="navigation">
 <div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pre-menu-collapse">
@@ -51,7 +51,9 @@
 							'theme_location'  => $location,
 							'container' => false,
 							'menu_id' => 'navbar-header',
-							'menu_class' => 'nav navbar-nav navbar-left navbar-menu'
+							'menu_class' => 'nav navbar-nav navbar-left navbar-menu',
+							'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+							'walker'            => new WP_Bootstrap_Navwalker()
 						);
 						wp_nav_menu( $args );
 					} ?>

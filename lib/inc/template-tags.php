@@ -133,3 +133,81 @@ function _mbbasetheme_category_transient_flusher() {
 }
 add_action( 'edit_category', '_mbbasetheme_category_transient_flusher' );
 add_action( 'save_post',     '_mbbasetheme_category_transient_flusher' );
+
+if ( ! function_exists( '_mbbasetheme_get_carousel' ) ) :
+/**
+ * Outputs a carousel of slides
+ *
+ * @param	string $post_id Required. post ID
+ *
+ * @return	A carousel HTML code
+ */
+function _mbbasetheme_get_carousel($post_id) {
+	$carousel = get_post_meta($post_id,'_carousel',true);
+	if ( $carousel == '' )
+		return;
+
+	// carousel vars
+	$carousel_h = get_post_meta( $carousel['ID'],'_carousel_height',true);
+	// indicators and controls
+	$indicators = get_post_meta($carousel['ID'],'_carousel_indicators',true);
+	$controls = get_post_meta($carousel['ID'],'_carousel_controls',true);
+	$indicators_out = ( $indicators == 1 ) ? '<!-- Indicators --><ol class="carousel-indicators">' : '';
+	if ( $controls == 1 ) {
+		$controls_out = '
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carousel-'.$carousel['post_slug'].'" role="button" data-slide="prev">
+				<span class="icon-prev" aria-hidden="true"></span>
+				<span class="sr-only">'._('Previous','_mbbasetheme').'</span>
+			</a>
+			<a class="right carousel-control" href="#carousel-'.$carousel['post_slug'].'" role="button" data-slide="next">
+				<span class="icon-next" aria-hidden="true"></span>
+				<span class="sr-only">'.__('Next','_mbbasetheme').'</span>
+			</a>
+		';
+	} else {
+		$controls_out = '';
+	}
+
+	// slides
+	$slides = get_post_meta( $carousel['ID'],'_carousel_diapos',false);
+	$slides_out = '<div class="carousel-inner" role="listbox">';
+	$count = 0;
+	foreach ( $slides as $s ) {
+		$active_class = ( $count == 0 ) ? ' active' : '';
+		$slide_desc = ( $s['post_content'] != '' ) ? '<div class="carousel-desc">' .apply_filters( 'the_content', $s['post_content'] ). '</div>' : '';
+		$slide_bgcolor = get_post_meta( $s['ID'],'_slide_bgcolor',true);
+		$slide_show_tit = get_post_meta( $s['ID'],'_slide_show_tit',true);
+		$slide_tit = ( $slide_show_tit == 1 ) ? '<h3 class="carousel-tit">'.$s['post_title'].'</h3>' : '';
+		$slide_caption_bg = get_post_meta( $s['ID'],'_slide_caption_bg',true);
+		$slide_caption_class = ( $slide_caption_bg == 1 ) ? '' : ' carousel-caption-bg';
+		if ( has_post_thumbnail($s['ID']) ) {
+			//$slide_img = get_the_post_thumbnail($s['ID'],'full',array('class' => 'img-responsive'));
+			$slide_img = '';
+			$slide_img_src = wp_get_attachment_image_src( get_post_thumbnail_id($s['ID']),'full' );
+			$slide_style = ' style="height: '.$carousel_h.'px; background-image: url('.$slide_img_src[0].'); background-repeat: no-repeat; background-size: cover; background-position: center center;"';
+		} else { $slide_img = ""; $slide_style = ' style="height: '.$carousel_h.'px; background-color: '.$slide_bgcolor.';"'; }
+		// indicators
+		$indicators_out .= ( $indicators == 1 ) ? '<li data-target="#carousel-'.$carousel['post_slug'].'" data-slide-to="'.$count.'" class="'.$active_class.'"></li>' : '';
+		// slides
+		$slides_out .= '
+			<div class="item'.$active_class.'"'.$slide_style.'>
+				'.$slide_img.'
+				<div class="carousel-caption">
+					<div class="carousel-caption-inner'.$slide_caption_class.'">
+						'.$slide_tit.$slide_desc.'
+					</div>
+				</div>
+			</div>
+		';
+		$count++;
+	}
+	$indicators_out .= '</ol>';
+	$slides_out .= '</div>';
+
+	// output
+	echo '<div id="carousel-'.$carousel['post_slug'].'" class="carousel slide" data-ride="carousel" data-interval="false">'.$indicators_out . $slides_out . $controls_out.'</div>';
+
+}
+endif;
+

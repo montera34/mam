@@ -32,6 +32,11 @@ _mbbasetheme is based on Underscores http://underscores.me/, (C) 2012-2014 Autom
 /* ==========================================================================
    Variables
    ========================================================================== */
+.site-content {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 /* ==========================================================================
    Header
    ========================================================================== */
@@ -56,6 +61,7 @@ _mbbasetheme is based on Underscores http://underscores.me/, (C) 2012-2014 Autom
    ========================================================================== */
 .mam-menu {
   font: 300 16px "Raleway", sans-serif;
+  color: #000;
   text-transform: uppercase;
   text-decoration: none !important;
   margin-top: 0;
@@ -65,119 +71,48 @@ _mbbasetheme is based on Underscores http://underscores.me/, (C) 2012-2014 Autom
   padding-left: 0;
   padding-right: 0;
 }
-
-/* ==========================================================================
-   Posts and pages
-   ========================================================================== */
-.hentry {
-  margin: 0 0 1.5em;
+.mam-menu .navbar-nav > li > a {
+  padding: 5px 0 !important;
+  margin: 5px 30px 10px 0 !important;
+  border-bottom: 1px solid transparent;
+}
+.mam-menu .navbar-nav > li > a:hover, .mam-menu .current-menu-item > a {
+  border-bottom: 1px solid #000 !important;
+}
+.mam-menu .dropdown-menu a:hover {
+  text-decoration: underline;
 }
 
-.byline,
-.updated {
-  display: none;
+.carousel-caption {
+  text-shadow: none;
+  bottom: auto;
+  left: 0;
+  right: auto;
+  text-align: left;
+  max-width: 40%;
 }
-
-.single .byline,
-.group-blog .byline {
-  display: inline;
+.carousel-caption .carousel-tit {
+  font: 300 24px "Raleway", sans-serif;
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  margin-top: 25px;
+  margin-bottom: 11px;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding-top: 7px;
+  padding-left: 7px;
+  padding-right: 7px;
 }
-
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0;
+.carousel-caption .carousel-desc {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  padding-top: 7px;
+  padding-left: 7px;
+  padding-right: 7px;
 }
-
-.page-links {
-  clear: both;
-  margin: 0 0 1.5em;
-}
-
-.page-content img.wp-smiley,
-.entry-content img.wp-smiley,
-.comment-content img.wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0;
-}
-
-.wp-caption {
-  border: 1px solid #ccc;
-  margin-bottom: 1.5em;
-  max-width: 100%;
-}
-
-.wp-caption img[class*="wp-image-"] {
-  display: block;
-  margin: 1.2% auto 0;
-  max-width: 98%;
-}
-
-.wp-caption-text {
-  text-align: center;
-}
-
-.wp-caption .wp-caption-text {
-  margin: 0.8075em 0;
-}
-
-.site-main .gallery {
-  margin-bottom: 1.5em;
-}
-
-.site-main .gallery a img {
-  border: none;
-  height: auto;
-  max-width: 90%;
-}
-
-.site-main .gallery dd,
-.site-main .gallery figcaption {
+.carousel-caption .carousel-desc p {
   margin: 0;
 }
-
-/* Make sure embeds and iframes fit their containers */
-embed,
-iframe,
-object {
-  max-width: 100%;
-}
-
-/* ==========================================================================
-   Home Page Template
-   ========================================================================== */
-/* ==========================================================================
-   Blog pages
-   ========================================================================== */
-/* ==========================================================================
-   Widgets
-   ========================================================================== */
-.widget {
-  margin: 0 0 1.5em;
-}
-
-/* Make sure select elements fit in widgets */
-.widget select {
-  max-width: 100%;
-}
-
-/* Search widget */
-.widget_search .search-submit {
-  display: none;
-}
-
-/* ==========================================================================
-   Comments
-   ========================================================================== */
-.comment-content a {
-  word-wrap: break-word;
-}
-
-/* ==========================================================================
-   Forms
-   ========================================================================== */
-/* Gravity Forms */
 
 /*# sourceMappingURL=style.css.map */

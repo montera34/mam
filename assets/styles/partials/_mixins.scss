@@ -37,8 +37,9 @@
 }
 
 /* Raleway fontface mixin */
-@mixin raleway($fsize:$font-size-base,$tdecoration:none,$mtop:0,$mbottom:0) {
+@mixin raleway($fsize:$font-size-base,$fcolor:$text-color,$tdecoration:none,$mtop:0,$mbottom:0) {
 	font: 300 $fsize 'Raleway', sans-serif;
+	color: $fcolor;
 	text-transform: uppercase;
 	text-decoration: $tdecoration !important;
 	margin:{

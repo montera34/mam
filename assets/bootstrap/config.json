@@ -103,8 +103,8 @@
     "@input-group-addon-bg": "@gray-lighter",
     "@input-group-addon-border-color": "@input-border",
     "@cursor-disabled": "not-allowed",
-    "@dropdown-bg": "rgba(255,255,255,.66)",
-    "@dropdown-border": "rgba(255,255,255,.66)",
+    "@dropdown-bg": "@body-bg",
+    "@dropdown-border": "@body-bg",
     "@dropdown-fallback-border": "#fff",
     "@dropdown-divider-bg": "#e5e5e5",
     "@dropdown-link-color": "@link-color",
@@ -418,5 +418,5 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "https://getbootstrap.com/docs/3.3/customize/?id=e5c21abba87e23365372990457a569e5"
+  "customizerUrl": "https://getbootstrap.com/docs/3.3/customize/?id=5985d408320c9bd83db78f693834f450"
 }

@@ -29,7 +29,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-				<img src="<?php echo MB_BLOGTHEME; ?>/assets/images/mam.logo.png" alt="<?php __('Logotipo de Madrid a medias','_mbbasetheme'); ?>" />
+				<a href="<?php echo MB_BLOGURL; ?>" title="<?php echo MB_BLOGDESC; ?>"><img src="<?php echo MB_BLOGTHEME; ?>/assets/images/mam.logo.png" alt="<?php __('Logotipo de Madrid a medias','_mbbasetheme'); ?>" /></a>
 				</div><!-- col- -->
 			</div><!-- row -->
 		</div><!-- container -->

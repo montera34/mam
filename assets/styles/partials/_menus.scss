@@ -10,4 +10,15 @@
 			right: 0;
 		}
 	}
+	.navbar-nav > li > a {
+		padding: 5px 0 !important;
+		margin: 5px 30px 10px 0 !important;
+		border-bottom: 1px solid transparent;
+	}
+	.navbar-nav > li > a:hover, .current-menu-item > a {
+		border-bottom: 1px solid $text-color !important;
+	}
+	.dropdown-menu a:hover {
+		text-decoration: underline;
+	}
 }

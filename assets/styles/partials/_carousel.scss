@@ -1,0 +1,28 @@
+.carousel-caption {
+	text-shadow: none;
+	bottom: auto;
+	left: 0;
+	right: auto;
+	text-align: left;
+	max-width: 40%;
+	.carousel-tit {
+		@include raleway(24px,$text-color,none,$space,11px);
+		background-color: $body-bg-transparent;
+		padding: {
+			top: 7px;
+			left: 7px;
+			right: 7px;
+		}
+	}
+	.carousel-desc {
+		color: $text-color;
+		background-color: $body-bg-transparent;
+		text-transform: uppercase;
+		padding: {
+			top: 7px;
+			left: 7px;
+			right: 7px;
+		}
+		p { margin: 0; }
+	}
+}

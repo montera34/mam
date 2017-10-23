@@ -29,7 +29,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<img src="<?php echo MB_BLOGTHEME; ?>/assets/images/mam.logo.png" alt="Logotipo de Madrid a medias" />
+				<img src="<?php echo MB_BLOGTHEME; ?>/assets/images/mam.logo.png" alt="<?php __('Logotipo de Madrid a medias','_mbbasetheme'); ?>" />
 				</div><!-- col- -->
 			</div><!-- row -->
 		</div><!-- container -->
@@ -60,6 +60,6 @@
 				</div>
 			</div>
 		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+	</header><!-- #pre -->
 
 	<div id="content" class="site-content">

@@ -3,4 +3,12 @@
    ========================================================================== */
 
 .site-footer {
+	margin-bottom: $bigspace;
+	#colophon {
+		img {
+			height: 32px;
+			width: auto;
+			margin-right: $space;
+		}
+	}
 }

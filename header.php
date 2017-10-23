@@ -10,10 +10,12 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
-	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon.ico">
-	<link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/apple-touch-icon.png">
+	<link type="image/x-icon" rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon.ico">
+	<link type="image/png" sizes="256x256" rel="apple-touch-icon ion" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon.png">
+	<link type="image/png" rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon.png">
 	<?php wp_head(); ?>
 </head>
 
@@ -23,17 +25,38 @@
 	    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_mbbasetheme' ); ?></a>
-
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<img src="<?php echo MB_BLOGTHEME; ?>/assets/images/mam.logo.png" alt="Logotipo de Madrid a medias" />
+				</div><!-- col- -->
+			</div><!-- row -->
+		</div><!-- container -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', '_mbbasetheme' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		<nav id="pre-menu" class="navbar navbar-default bargl" role="navigation">
+<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pre-menu-collapse">
+						<span class="sr-only"><?php _e('Show/hide menu','_mbbasetheme') ?></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="pre-menu-collapse">
+					<?php $location = "header";
+					if ( has_nav_menu( $location ) ) {
+						$args = array(
+							'theme_location'  => $location,
+							'container' => false,
+							'menu_id' => 'navbar-header',
+							'menu_class' => 'nav navbar-nav navbar-left navbar-menu'
+						);
+						wp_nav_menu( $args );
+					} ?>
+				</div>
+			</div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

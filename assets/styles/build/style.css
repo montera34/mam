@@ -76,11 +76,39 @@ _mbbasetheme is based on Underscores http://underscores.me/, (C) 2012-2014 Autom
   margin: 5px 30px 10px 0 !important;
   border-bottom: 1px solid transparent;
 }
-.mam-menu .navbar-nav > li > a:hover, .mam-menu .current-menu-item > a {
-  border-bottom: 1px solid #000 !important;
-}
 .mam-menu .dropdown-menu a:hover {
   text-decoration: underline;
+}
+
+#pre-menu .navbar-nav > li > a:hover, #pre-menu .current-menu-item > a {
+  border-bottom: 1px solid #000 !important;
+}
+
+#epi-menu .navbar-nav > li > a:hover {
+  border-bottom: 1px solid #000 !important;
+}
+
+/* ==========================================================================
+   Posts and pages
+   ========================================================================== */
+.entry-title {
+  font: 300 32px "Raleway", sans-serif;
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.entry-figure {
+  margin-bottom: 25px;
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+  max-width: 100%;
 }
 
 .carousel-caption {
@@ -92,7 +120,7 @@ _mbbasetheme is based on Underscores http://underscores.me/, (C) 2012-2014 Autom
   max-width: 40%;
 }
 .carousel-caption .carousel-tit {
-  font: 300 24px "Raleway", sans-serif;
+  font: 300 32px "Raleway", sans-serif;
   color: #000;
   text-transform: uppercase;
   text-decoration: none !important;

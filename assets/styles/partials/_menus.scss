@@ -15,10 +15,17 @@
 		margin: 5px 30px 10px 0 !important;
 		border-bottom: 1px solid transparent;
 	}
+	.dropdown-menu a:hover {
+		text-decoration: underline;
+	}
+}
+#pre-menu {
 	.navbar-nav > li > a:hover, .current-menu-item > a {
 		border-bottom: 1px solid $text-color !important;
 	}
-	.dropdown-menu a:hover {
-		text-decoration: underline;
+}
+#epi-menu {
+	.navbar-nav > li > a:hover {
+		border-bottom: 1px solid $text-color !important;
 	}
 }

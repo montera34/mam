@@ -6,7 +6,7 @@
 	text-align: left;
 	max-width: 40%;
 	.carousel-tit {
-		@include raleway(24px,$text-color,none,$space,11px);
+		@include raleway(32px,$text-color,none,$space,11px);
 		background-color: $body-bg-transparent;
 		padding: {
 			top: 7px;

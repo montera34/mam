@@ -15,6 +15,24 @@
 .item-figure, .item-header, .item-content {
 	margin-bottom: 11px;
 }
+
+.single-header {
+	margin-bottom: 11px;
+	a:hover { text-decoration: underline; }
+}
+.single-title {
+	@include raleway($font-size-huge);
+}
+.single-meta {
+	font-size: $font-size-small;
+	dd { margin-bottom: 11px; }
+	a:hover { text-decoration: underline; }
+}
+
+.blog article {
+	margin-bottom: $bigspace;
+}
+
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,

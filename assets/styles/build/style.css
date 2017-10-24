@@ -117,6 +117,36 @@ _mbbasetheme is based on Underscores http://underscores.me/, (C) 2012-2014 Autom
   margin-bottom: 11px;
 }
 
+.single-header {
+  margin-bottom: 11px;
+}
+.single-header a:hover {
+  text-decoration: underline;
+}
+
+.single-title {
+  font: 300 32px "Raleway", sans-serif;
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.single-meta {
+  font-size: 13px;
+}
+.single-meta dd {
+  margin-bottom: 11px;
+}
+.single-meta a:hover {
+  text-decoration: underline;
+}
+
+.blog article {
+  margin-bottom: 50px;
+}
+
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,

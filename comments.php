@@ -22,7 +22,9 @@ if ( post_password_required() ) {
 
 	<?php // You can start editing here -- including this comment! ?>
 
-	<?php if ( have_comments() ) : ?>
+	<?php if ( have_comments() ) :
+		$form_classes = "col-md-4 col-md-pull-8";
+	?>
 	<div class="col-md-8 col-md-push-4">
 
 		<h2 class="comments-title"><?php _e('Comments','_mbbasetheme'); ?></h2>
@@ -53,7 +55,9 @@ if ( post_password_required() ) {
 		<?php endif; // check for comment navigation ?>
 
 	</div>
-	<?php endif; // have_comments() ?>
+	<?php else :
+		$form_classes = "col-md-4";
+	endif; // have_comments() ?>
 
 	<?php
 		// If comments are closed and there are comments, let's leave a little note, shall we?
@@ -87,9 +91,10 @@ $comments_args = array(
         'comment_field' =>  '<p class="comment-form-comment"><div class="form-group"><label for="comment">' . _x( 'Comment', '_mbbasetheme' ) .
             '</label><textarea id="comment" name="comment" class="form-control"  rows="8" aria-required="true">' .
             '</textarea></div></p>',
-	    'comment_notes_after' => ' '); ?>
+	    'comment_notes_after' => ' '
+); ?>
 
-	<div class="col-md-4 col-md-pull-8">
+	<div class="<?php echo $form_classes; ?>">
 		<?php comment_form($comments_args); ?>
 	</div>
 

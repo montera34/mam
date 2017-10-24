@@ -15,7 +15,13 @@
 .item-figure, .item-header, .item-content {
 	margin-bottom: 11px;
 }
-
+.item-meta {
+	font-size: $font-size-small;
+	font-weight: bold;
+}
+.item-footer {
+	font-size: $font-size-small;
+}
 .single-header {
 	margin-bottom: 11px;
 	a:hover { text-decoration: underline; }

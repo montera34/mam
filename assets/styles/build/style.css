@@ -83,6 +83,9 @@ _mbbasetheme is based on Underscores http://underscores.me/, (C) 2012-2014 Autom
 #pre-menu .navbar-nav > li > a:hover, #pre-menu .current-menu-item > a {
   border-bottom: 1px solid #000 !important;
 }
+#pre-menu .dropdown-menu .current-menu-item > a {
+  border-bottom: none !important;
+}
 
 #epi-menu .navbar-nav > li > a:hover {
   border-bottom: 1px solid #000 !important;

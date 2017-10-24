@@ -23,6 +23,11 @@
 	.navbar-nav > li > a:hover, .current-menu-item > a {
 		border-bottom: 1px solid $text-color !important;
 	}
+	.dropdown-menu {
+		.current-menu-item > a {
+			border-bottom: none !important;
+		}
+	}
 }
 #epi-menu {
 	.navbar-nav > li > a:hover {

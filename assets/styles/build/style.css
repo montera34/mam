@@ -172,6 +172,34 @@ object {
 /* ==========================================================================
    Blog pages
    ========================================================================== */
+/* ==========================================================================
+   Comments
+   ========================================================================== */
+#comments {
+  margin-top: 50px;
+}
+
+.comment-reply-title, .comments-title {
+  font: 300 24px "Raleway", sans-serif;
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  margin-top: 0;
+  margin-bottom: 11px;
+}
+
+.comment-list li {
+  margin-bottom: 25px;
+}
+
+.comment-form {
+  font-size: 13px;
+}
+
+.comment-content a {
+  word-wrap: break-word;
+}
+
 .carousel-caption {
   text-shadow: none;
   bottom: auto;

@@ -2,9 +2,21 @@
    Comments
    ========================================================================== */
 
+#comments {
+	margin-top: $bigspace;
+}
+.comment-reply-title, .comments-title {
+	@include raleway($font-size-big,$text-color,none,0,11px);
+}
+.comment-list {
+	li {
+		margin-bottom: $space;
+	}
+}
+.comment-form {
+	font-size: $font-size-small;
+}
 .comment-content a {
 	word-wrap: break-word;
 }
 
-.bypostauthor {
-}

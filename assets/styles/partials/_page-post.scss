@@ -3,12 +3,18 @@
    ========================================================================== */
 
 .entry-title {
-	@include raleway(32px);
+	@include raleway($font-size-huge);
 }
 .entry-figure {
 	margin-bottom: $space;
 }
 
+.item-title {
+	@include raleway($font-size-big);
+}
+.item-figure, .item-header, .item-content {
+	margin-bottom: 11px;
+}
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,

@@ -2,4 +2,13 @@
    Home Page Template
    ========================================================================== */
 
-body.home {}
+.slogan-desc {
+	font-size: $font-size-big;
+	margin-top: $space;
+}
+#last {
+	margin-top: $bigspace;
+	.sec-tit {
+		font-size: $font-size-big;
+	}
+}

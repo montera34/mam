@@ -4,7 +4,7 @@
  */
 
 $loop_prefix = 'single';
-$img_size = 'medium';
+$img_size = ( is_single() ) ? 'post-thumbnail' : 'medium';
 $loop_classes = 'row';
 
 $loop_perma = get_permalink();
@@ -27,6 +27,7 @@ if ( $categories_list && _mbbasetheme_categorized_blog() ) {
 
 <article id="post-<?php the_ID(); ?>" <?php post_class($loop_classes); ?>>
 	<header class="col-md-12 <?php echo $loop_prefix; ?>-header">
+		<?php if ( is_single() ) echo $loop_image; ?>
 		<a href="<?php echo $loop_perma ?>"><h2 class="<?php echo $loop_prefix; ?>-title"><?php echo $loop_tit ?></h2></a>
 	</header>
 	<div class="clearfix"></div>
@@ -43,7 +44,7 @@ if ( $categories_list && _mbbasetheme_categorized_blog() ) {
 			<?php }
 			edit_post_link( __( 'Edit', '_mbbasetheme' ), '<dt class="'.$loop_prefix.'-edit"></dt><dd class="'.$loop_prefix.'-edit">', '</dd>' );?>
 		</dl>
-		<?php echo $loop_image ?>
+		<?php if ( !is_single() ) echo $loop_image; ?>
 	</aside>
 	<div class="col-md-8 <?php echo $loop_prefix; ?>-content">
 		<?php the_content(); ?>

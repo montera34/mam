@@ -124,6 +124,10 @@ _mbbasetheme is based on Underscores http://underscores.me/, (C) 2012-2014 Autom
   text-decoration: underline;
 }
 
+.single-figure {
+  margin-bottom: 25px;
+}
+
 .single-title {
   font: 300 32px "Raleway", sans-serif;
   color: #000;

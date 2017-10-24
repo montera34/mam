@@ -20,6 +20,9 @@
 	margin-bottom: 11px;
 	a:hover { text-decoration: underline; }
 }
+.single-figure {
+	margin-bottom: $space;
+}
 .single-title {
 	@include raleway($font-size-huge);
 }

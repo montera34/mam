@@ -41,8 +41,8 @@
 		<div id="colophon" class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<img class="" src="<?php echo MB_BLOGTHEME; ?>/assets/images/mam.logo.png" alt="<?php __('Logotipo de Madrid a medias','_mbbasetheme'); ?>" />
-					<img src="<?php echo MB_BLOGTHEME; ?>/assets/images/centrocentro.logo.gif" alt="<?php __('Logotipo del Centro Centro','_mbbasetheme'); ?>" />
+					<img class="" src="<?php echo MB_BLOGTHEME; ?>/assets/images/mam.logo.png" alt="<?php __('Madrid a medias logotype','_mbbasetheme'); ?>" />
+					<img src="<?php echo MB_BLOGTHEME; ?>/assets/images/centrocentro.logo.gif" alt="<?php __('Centro Centro logotype','_mbbasetheme'); ?>" />
 				</div>
 			</div>
 		</div><!-- #colophon -->

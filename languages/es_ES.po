@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mam 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-10-24 10:10+0200\n"
-"PO-Revision-Date: 2017-10-24 10:13+0200\n"
+"POT-Creation-Date: 2017-10-24 11:59+0200\n"
+"PO-Revision-Date: 2017-10-24 12:01+0200\n"
 "Last-Translator: Alfonso Sánchez Uzábal <skotperez@voragine.net>\n"
 "Language-Team: Montera34\n"
 "Language: es_ES\n"
@@ -110,21 +110,45 @@ msgstr ""
 msgid "Archives"
 msgstr ""
 
-#: comments.php:35 comments.php:52
+#: comments.php:30 content-single-post.php:42
+msgid "Comments"
+msgstr "Comentarios"
+
+#: comments.php:34 comments.php:51
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:36 comments.php:53
+#: comments.php:35 comments.php:52
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:37 comments.php:54
+#: comments.php:36 comments.php:53
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:64
+#: comments.php:66
 msgid "Comments are closed."
 msgstr "Los comentarios están cerrados."
+
+#: comments.php:72
+msgid "Name"
+msgstr "Nombre"
+
+#: comments.php:77
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: comments.php:82
+msgid "Website"
+msgstr "Sitio web"
+
+#: comments.php:89
+msgid "Discuss this post"
+msgstr "¡Comenta!"
+
+#: comments.php:91
+msgid "Comment"
+msgstr "Comentario"
 
 #: content-none.php:13
 msgid "Nothing Found"
@@ -152,35 +176,37 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: content-page.php:33 content-post.php:44 content-search.php:53
-#: content-single-post.php:44 content-single.php:58 content.php:55
+#: content-page.php:33 content-post.php:46 content-search.php:53
+#: content-single-post.php:45 content-single.php:58 content.php:55
 msgid "Edit"
 msgstr "Editar"
 
-#. translators: used between list items, there is a space after the comma
-#: content-post.php:19 content-search.php:30 content-search.php:40
-#: content-single-post.php:20 content-single.php:29 content-single.php:32
-#: content.php:32 content.php:42
-msgid ", "
-msgstr ""
-
-#: content-post.php:22
+#: content-post.php:23
 msgid "Context: "
 msgstr "Contexto: "
 
-#: content-post.php:42 content-search.php:50 content-single-post.php:42
-#: content.php:52
-msgid "Leave a comment"
-msgstr "Dejar un comentario"
+#: content-post.php:44
+msgid "Comments: "
+msgstr "Comentarios: "
 
-#: content-post.php:42 content-single-post.php:42
+#: content-post.php:44
+msgid "No comments"
+msgstr "Ningún comentario"
+
+#: content-post.php:44 content-single-post.php:43
 msgid "1 comment"
 msgstr "1 comentario"
 
-#: content-post.php:42 content-single-post.php:42
+#: content-post.php:44 content-single-post.php:43
 #, php-format
 msgid "% comments"
 msgstr "% comentarios"
+
+#. translators: used between list items, there is a space after the comma
+#: content-search.php:30 content-search.php:40 content-single-post.php:20
+#: content-single.php:29 content-single.php:32 content.php:32 content.php:42
+msgid ", "
+msgstr ""
 
 #: content-search.php:34 content.php:36
 #, php-format
@@ -191,6 +217,10 @@ msgstr ""
 #, php-format
 msgid "Tagged %1$s"
 msgstr ""
+
+#: content-search.php:50 content-single-post.php:43 content.php:52
+msgid "Leave a comment"
+msgstr "Dejar un comentario"
 
 #: content-search.php:50 content.php:52
 msgid "1 Comment"
@@ -204,17 +234,13 @@ msgstr "% comentarios"
 msgid "Context"
 msgstr "Contexto"
 
-#: content-single-post.php:35
+#: content-single-post.php:36
 msgid "Publication date"
 msgstr "Fecha de publicación"
 
-#: content-single-post.php:37
+#: content-single-post.php:38
 msgid "Author"
 msgstr "Autor"
-
-#: content-single-post.php:41
-msgid "Comments"
-msgstr "Comentarios"
 
 #: content-single.php:37
 #, php-format

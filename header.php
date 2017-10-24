@@ -50,13 +50,26 @@
 						$args = array(
 							'theme_location'  => $location,
 							'container' => false,
-							'menu_id' => 'navbar-header',
+							'menu_id' => 'navbar-'.$location,
 							'menu_class' => 'nav navbar-nav navbar-left navbar-menu',
 							'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
 							'walker'            => new WP_Bootstrap_Navwalker()
 						);
 						wp_nav_menu( $args );
+					}
+					$location = "header-2";
+					if ( has_nav_menu( $location ) ) {
+						$args = array(
+							'theme_location'  => $location,
+							'container' => false,
+							'menu_id' => 'navbar-'.$location,
+							'menu_class' => 'nav navbar-nav navbar-right navbar-menu',
+							'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+							'walker'            => new WP_Bootstrap_Navwalker()
+						);
+						wp_nav_menu( $args );
 					} ?>
+
 				</div>
 			</div>
 		</nav><!-- #site-navigation -->

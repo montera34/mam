@@ -46,6 +46,7 @@ function _mbbasetheme_setup() {
 	register_nav_menus( array(
 		'header' => __( 'Header Menu', '_mbbasetheme' ),
 		'footer' => __( 'Footer Menu', '_mbbasetheme' ),
+		'header-2' => __( 'Secondary header menu', '_mbbasetheme' ),
 	) );
 
 	// Register Widget Areas

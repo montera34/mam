@@ -76,6 +76,9 @@ _mbbasetheme is based on Underscores http://underscores.me/, (C) 2012-2014 Autom
   margin: 5px 30px 10px 0 !important;
   border-bottom: 1px solid transparent;
 }
+.mam-menu .navbar-nav {
+  margin: 7px 15px;
+}
 .mam-menu .dropdown-menu a:hover {
   text-decoration: underline;
 }
@@ -222,7 +225,7 @@ object {
   left: 0;
   right: auto;
   text-align: left;
-  max-width: 40%;
+  max-width: 70%;
 }
 .carousel-caption .carousel-tit {
   font: 300 32px "Raleway", sans-serif;
